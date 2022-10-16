@@ -83,7 +83,7 @@ set_name: str, set_value: str, matcher: Type[Matcher], bot: Bot, event: MessageE
             
     except Exception as e:
         
-        msg = f"重载出错了,查看报错{type(e)}:{e}"
+        msg = f"修改出错了,查看报错{type(e)}:{e}"
     
     return msg
     
