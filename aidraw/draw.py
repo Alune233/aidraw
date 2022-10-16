@@ -68,8 +68,8 @@ async def _(bot: Bot, event: MessageEvent, state: T_State, msg: Message = Comman
 @i2i.handle()
 async def _(bot: Bot, event: MessageEvent, state: T_State):
     
-    img_url,style = split_msg(event)
     try:    
+        img_url,style = split_msg(event)
         result = await get_img(31, style,img_url, t2i, bot, event)
     except:
         result = "格式错误...或者你根本没图！"
