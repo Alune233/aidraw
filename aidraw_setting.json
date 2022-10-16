@@ -1,10 +1,10 @@
 {
     "setting": [
         {
-            "url": "https://13851.gradio.app/api/predict/",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text,error, missing fngers,extra digt ,fewer digits,cropped, wort quality ,low quality,normal quality, jpeg artifacts,signature,watermark, username, blurry, bad feet",
-            "step": 29,
-            "denoising": 0.98,
+            "url": "你的stable-diffusion创建的可以访问的网址",
+            "negative_prompt": "{{nsfw}},{{poorly drawn hands}},{{poorly drawn face}},{{mutation}}},{{deformed}}},{{ugly}},blurry,{{bad anatomy}},{{bad proportions}},{{extra limbs}},cloned face,{{disfigured}}},{{morethan 2 nipples},{{**}}out of frame,ugly,extra limbs,{bad anatomy},gross proportions,{malformed limbs},{{missing arms}},{{missing legs}},{{extra arms}},{{extra legs}},mutated hands,{fused fingers},{too many fingers},{{long neck}},missing fingers,extradigit,fewer digits,bad feet,lowres,bad anatomy,bad hands,text,error,missing fngers,extra digt,fewer digits,cropped,wort quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry",
+            "step": 20,
+            "denoising": 0.75,
             "size": {
                 "height": 512,
                 "width": 512
