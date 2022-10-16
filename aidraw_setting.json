@@ -1,0 +1,36 @@
+{
+    "setting": [
+        {
+            "url": "https://13851.gradio.app/api/predict/",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text,error, missing fngers,extra digt ,fewer digits,cropped, wort quality ,low quality,normal quality, jpeg artifacts,signature,watermark, username, blurry, bad feet",
+            "step": 29,
+            "denoising": 0.98,
+            "size": {
+                "height": 512,
+                "width": 512
+            },
+            "method": "1",
+            "resize": "1",
+            "b_count": 1,
+            "b_size": 1
+        },
+        {
+            "method_ls": {
+                "1": "Euler a",
+                "2": "Euler",
+                "3": "LMS",
+                "4": "Heun",
+                "5": "DPM2",
+                "6": "DPM2 a",
+                "7": "LMS Karras",
+                "8": "DPM2 a Karras",
+                "9": "DDIM"
+            },
+            "resize_ls": {
+                "1": "Just resize",
+                "2": "Crop and resize",
+                "3": "Resize and fill"
+            }
+        }
+    ]
+}
