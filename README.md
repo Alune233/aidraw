@@ -15,4 +15,4 @@
 *加号组成部分以空格隔开*  
 ## 效果
 ![ait2i2](https://user-images.githubusercontent.com/86911121/196038738-54b731a4-e4a1-46b5-a8bc-867052a11365.PNG)![aii2i](https://user-images.githubusercontent.com/86911121/196038740-8faaf66d-64e1-4d0f-9745-ae27fc802b50.PNG)
-
+`指令触发方式参考了_zhenxun_plugin_petpet_里的depends.py文件`感谢插件作者
