@@ -74,12 +74,12 @@ tool: int, style: str, img_url: str, matcher: Type[Matcher], bot: Bot, event: Me
         msg = f"出错了,可能管理员把设备关闭了。。{type(e)}:{e}"
         return msg
 
-def _is_at_me_seg(segment: MessageSegment):
-    return segment.type == "at" and str(segment.data.get("qq", "")) == str(
-        event.self_id
-        )
 
 def split_msg(event: MessageEvent):
+    def _is_at_me_seg(segment: MessageSegment):
+        return segment.type == "at" and str(segment.data.get("qq", "")) == str(
+        event.self_id
+        )
     msg: msg = event.get_message()
     if event.reply:
         args = []
