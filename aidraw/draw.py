@@ -15,10 +15,10 @@ from PIL import Image
 from .data_source import get_img,split_msg,show_info
 #from utils.utils import get_message_img
 
-__zx_plugin_name__ = "AI绘图"
+__zx_plugin_name__ = "A酱绘图"
 __plugin_usage__ = """
 usage：
-    AI绘图
+    A酱绘图
     指令：
         ait2i+描述(英文)
         aii2i+描述(英文)+图片
@@ -28,7 +28,7 @@ usage：
         加号组成部分以空格隔开
         
 """.strip()
-__plugin_des__ = "AI绘图"
+__plugin_des__ = "A酱绘图"
 __plugin_cmd__ = [
     "ait2i/aii2i",
     "drawshow"
@@ -68,7 +68,7 @@ async def _(bot: Bot, event: MessageEvent, state: T_State, msg: Message = Comman
 @i2i.handle()
 async def _(bot: Bot, event: MessageEvent, state: T_State):
     
-    try:    
+    try:
         img_url,style = split_msg(event)
         result = await get_img(31, style,img_url, t2i, bot, event)
     except:
@@ -81,12 +81,11 @@ async def _(bot: Bot, event: MessageEvent, state: T_State, msg: Message = Comman
     msg = msg.extract_plain_text().strip()
 
     if len(msg) < 1:
-
         await show_aidraw.finish("没有指定也要show？")
     
     what = msg
     msg = await show_info(what,show_aidraw,bot, event)
     
-    await reload_aidraw.send(msg)
+    await show_aidraw.send(msg)
 
 

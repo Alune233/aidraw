@@ -3,6 +3,7 @@ from nonebot.adapters.onebot.v11 import (
     Bot,
     MessageEvent,
     Message,
+    unescape,
 )
 from nonebot.permission import SUPERUSER
 from nonebot import on_command

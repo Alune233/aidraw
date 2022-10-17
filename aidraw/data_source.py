@@ -17,15 +17,16 @@ from PIL import Image
 from configs.path_config import TEXT_PATH
 import hashlib
 from utils.http_utils import AsyncHttpx
+from utils.message_builder import image
+from utils.image_utils import text2image
 
-
+path_set = TEXT_PATH / "aidraw_setting.json"
 async def get_img(
 tool: int, style: str, img_url: str, matcher: Type[Matcher], bot: Bot, event: MessageEvent
 ):
-    await matcher.send("真寻开始画画了...")
+    await matcher.send("A酱开始画画了...")
     # 读取数据
     data_se = {}
-    path_set = TEXT_PATH / "aidraw_setting.json"
     with open(path_set)as f:
         data_se = json.load(f)
     
@@ -73,7 +74,6 @@ tool: int, style: str, img_url: str, matcher: Type[Matcher], bot: Bot, event: Me
     except Exception as e:
         msg = f"出错了,可能管理员把设备关闭了。。{type(e)}:{e}"
         return msg
-
 
 def split_msg(event: MessageEvent):
     def _is_at_me_seg(segment: MessageSegment):
@@ -142,6 +142,8 @@ def split_msg(event: MessageEvent):
                             args.append(text)
         #img_url = get_message_img(event.json())[0]
         style = (',').join(args)
+    print(type(img_url),type(style))
+    print(img_url,style)
         
     return img_url,style
         
@@ -184,7 +186,7 @@ what: str, matcher: Type[Matcher], bot: Bot, event: MessageEvent
             else:
                 msg="错误的指定！"
                 return msg
-            img = image(b64=(await text2image(info, font_size=25, color="#f9f6f2")).pic2bs4())
+            img = image(b64=(await text2image(info, font_size=25, color="#f58f98")).pic2bs4())
             
         msg = img
             
